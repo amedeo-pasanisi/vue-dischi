@@ -20,8 +20,9 @@ export default {
         align-items: center;
         text-align: center;
         flex-direction: column;
-        width: 130px;
+        width: calc(100% / 5 - 20px);
         height: 250px;
+        margin: 0 10px;
         padding: 10px;
         background-color: #424c55;
         img {

@@ -40,7 +40,7 @@ export default {
         background-color: #1E2D3B;
         padding: 60px 0;
         .container {
-            width: 70%;
+            width: 50%;
             height: 100%;
             margin: auto;
             display: flex;
