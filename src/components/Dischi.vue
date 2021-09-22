@@ -1,10 +1,12 @@
 <template>
     <div id="dischi">
-        <Disco 
-            v-for= "(disco,index) in dischi"
-            :key= "index"
-            :disco= "disco"
-        />
+        <div class="container">
+            <Disco 
+                v-for= "(disco,index) in dischi"
+                :key= "index"
+                :disco= "disco"
+            />
+        </div>
     </div>
 </template>
 
@@ -33,5 +35,18 @@ export default {
 </script>
 
 <style lang="scss">
-
+    #dischi {
+        height: 90%;
+        background-color: #1E2D3B;
+        padding: 60px 0;
+        .container {
+            width: 70%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
 </style>
