@@ -1,19 +1,33 @@
 <template>
   <div id="app">
-    <header>
-      <img src="./assets/Spotify.png" alt="">
-    </header>
-    <Dischi />
+    <Header :genres= "genres" @selectedGenre= "selectedGenreToFilter" />
+    <Main :filter= "filter" @genres= "createGenresArray"/>
   </div>
 </template>
 
 <script>
-import Dischi from "./components/Dischi"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
 export default {
   name: 'App',
+  data () {
+    return {
+      filter: "",
+      genres: null
+    }
+  },
+  methods: {
+    selectedGenreToFilter (selectedGenre) {
+      this.filter = selectedGenre
+    },
+    createGenresArray (genres) {
+      this.genres = genres
+    }
+  },
   components: {
-    Dischi
+    Header,
+    Main
   }
 }
 </script>
@@ -27,15 +41,5 @@ export default {
 #app {
   height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  header {
-    height: 10%;
-    background-color: #424c55;
-    display: flex;
-    align-items: center;
-    img {
-      height: 50%;
-      margin-left: 20px;
-    }
-  }
 }
 </style>

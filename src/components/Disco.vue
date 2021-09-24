@@ -10,16 +10,18 @@
 <script>
 export default {
     name: "Disco",
-    props: ["disco"]
+    props: {
+        disco: Object
+    }
 }
 </script>
 
 <style scoped lang="scss">
     #disco {
         display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        flex-direction: column;
         width: calc(100% / 5 - 20px);
         height: 250px;
         margin: 0 10px;
